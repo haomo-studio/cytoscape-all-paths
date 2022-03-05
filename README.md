@@ -57,6 +57,16 @@ Return all paths, data format is: [ [ node, edge, node, edge, ... ], ... ]
 > options
 >  - maxPaths: limit the maximum number of paths. default is -1, means unlimited
 >  - rootIds: manually specify the root(s). if it is empty, will automatically calculate
+>  - directed: boolean. default: false
+>  - target: string. default: null
+
+
+`cy.elements().cytoscapeAllPathsTo(target, settings)`
+
+>  - target: string. The target node ID
+>  - settings: object. The existing settings object with keys rootIds and maxPaths
+
+cytoscapeAllPathsTo is an alias of cytoscapeAllPaths({directed: true, target: "YOUR_TARGET", ...})
 
 
 ## Build targets
